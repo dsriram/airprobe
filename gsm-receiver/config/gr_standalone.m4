@@ -114,7 +114,6 @@ m4_define([GR_STANDALONE],
   AC_CHECK_PROG([XMLTO],[xmlto],[yes],[])
   AM_CONDITIONAL([HAS_XMLTO], [test x$XMLTO = xyes])
 
-  PKG_CHECK_MODULES(GNURADIO_CORE, gnuradio-core >= 3)
+  PKG_CHECK_MODULES(GNURADIO_CORE, gnuradio-runtime >= 3)
   LIBS="$LIBS $GNURADIO_CORE_LIBS"
-  PKG_CHECK_MODULES(GRUEL, gruel >= 3)
 ])
